@@ -1,3 +1,66 @@
 DELETE user
 
 PUT user
+
+  POST user/_mapping
+  {
+    "dynamic": "strict",
+    "properties" :{
+      "user_id" : {"type" : "integer"},
+      "email" : {"type" : "text"},
+      "pwd" : {"type" : "text"},
+      "gender" : {"type" : "text"}
+    }
+  }
+
+  DELETE habits
+
+  PUT habits
+  {
+    "mappings": {
+      "dynamic" : "strict",
+      "properties": {
+        "habit_id": {
+          "type": "integer"
+        },
+      "user_id":{
+        "type": "integer"
+      },
+      "habit_name" : {
+        "type": "text"
+      },
+      "start_date":{
+        "type" : "date"
+      },
+      "progress" : {
+        "type":"integer"
+      }
+      }
+    }
+  }
+
+  DELETE record
+
+put record{
+  "mapping" : {
+     "dynamic": "strict",
+    "properties" : {
+      "record_id" : {
+        "type" : "integer"
+      },
+      "habit_id" : {
+        "type" : "integer"
+      },
+      "date" : {
+        "type" : "date"
+      },
+      "status" : {
+        "type" : "boolean"
+      },
+      "comment" : {
+        "type" : "text"
+      }
+    }
+  }
+}
+
