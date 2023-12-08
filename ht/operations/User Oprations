@@ -1,0 +1,42 @@
+POST user/_doc/1
+{
+  "user_id" : 1,
+  "email" : "user1@gmail.com",
+  "pwd" : "hellouser1",
+  "gender" : "male"
+}
+
+
+POST user/_doc/2
+{"user_id" : 2, "email" : "user2@gmail.com", "pwd": "hellouser2", "gender" : "female"}
+
+POST user/_doc/3
+{"user_id" : 3, "email" : "user3@gmail.com", "pwd": "hellouser3", "gender" : "male"}
+
+
+POST user/_doc/4
+{"user_id" : 4, "email" : "user4@gmail.com", "pwd": "hellouser4", "gender" : "female"}
+
+
+
+
+POST habits/_doc/1
+  { "habit_id": 1, "user_id": 2, "habit_name": "Running", "start_date": "2023-01-05", "progress": 60 }
+
+  POST habits/_doc/2
+  { "habit_id": 2, "user_id": 4, "habit_name": "Reading", "start_date": "2023-02-10", "progress": 40 }
+
+POST habits/_doc/3
+  { "habit_id": 3, "user_id": 1, "habit_name": "Meditation", "start_date": "2023-03-15", "progress": 80 }
+
+
+POST habits/_doc/4
+  { "habit_id": 4, "user_id": 3, "habit_name": "Coding", "start_date": "2023-04-20", "progress": 90 }
+
+
+POST habits/_doc/5
+  { "habit_id": 5, "user_id": 105, "habit_name": "Yoga", "start_date": "2023-05-25", "progress": 70 }
+
+
+POST habits/_doc/6
+  { "habit_id": 6, "user_id": 106, "habit_name": "Drawing", "start_date": "2023-06-30", "progress": 50 }
