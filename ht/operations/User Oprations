@@ -6,7 +6,7 @@ POST user/_doc/1
   "gender" : "male"
 }
 
-
+#create user
 POST user/_doc/2
 {"user_id" : 2, "email" : "user2@gmail.com", "pwd": "hellouser2", "gender" : "female"}
 
@@ -19,7 +19,7 @@ POST user/_doc/4
 
 
 
-
+#create habit
 POST habits/_doc/1
   { "habit_id": 1, "user_id": 2, "habit_name": "Running", "start_date": "2023-01-05", "progress": 60 }
 
@@ -40,3 +40,44 @@ POST habits/_doc/5
 
 POST habits/_doc/6
   { "habit_id": 6, "user_id": 106, "habit_name": "Drawing", "start_date": "2023-06-30", "progress": 50 }
+
+  #bulk create of habit
+
+    { "index": { "_id": "1" } }
+    { "habit_id": 1, "user_id": 101, "habit_name": "Running", "start_date": "2023-01-05", "progress": 60 }
+    { "index": { "_id": "2" } }
+    { "habit_id": 2, "user_id": 102, "habit_name": "Reading", "start_date": "2023-02-10", "progress": 40 }
+    { "index": { "_id": "3" } }
+    { "habit_id": 3, "user_id": 103, "habit_name": "Meditation", "start_date": "2023-03-15", "progress": 80 }
+    { "index": { "_id": "4" } }
+    { "habit_id": 4, "user_id": 104, "habit_name": "Coding", "start_date": "2023-04-20", "progress": 90 }
+    { "index": { "_id": "5" } }
+    { "habit_id": 5, "user_id": 105, "habit_name": "Yoga", "start_date": "2023-05-25", "progress": 70 }
+    { "index": { "_id": "6" } }
+    { "habit_id": 6, "user_id": 106, "habit_name": "Drawing", "start_date": "2023-06-30", "progress": 50 }
+    { "index": { "_id": "7" } }
+    { "habit_id": 7, "user_id": 107, "habit_name": "Cooking", "start_date": "2023-07-05", "progress": 20 }
+    { "index": { "_id": "8" } }
+    { "habit_id": 8, "user_id": 108, "habit_name": "Gardening", "start_date": "2023-08-10", "progress": 75 }
+    { "index": { "_id": "9" } }
+    { "habit_id": 9, "user_id": 109, "habit_name": "Music", "start_date": "2023-09-15", "progress": 35 }
+    { "index": { "_id": "10" } }
+    { "habit_id": 10, "user_id": 110, "habit_name": "Hiking", "start_date": "2023-10-20", "progress": 65 }
+
+
+
+#record
+POST record/_bulk
+{"index":{}}
+{"record_id": 1, "habit_id": 101, "date": "2023-01-15", "status": true, "comment": "Completed a refreshing 30-minute jog in the park, enjoying the beautiful sunrise"}
+{"index":{}}
+{"record_id": 2, "habit_id": 102, "date": "2023-02-20", "status": false, "comment": "Struggled to find time for reading amidst a hectic work schedule; will make up for it next weekend"}
+{"index":{}}
+{"record_id": 3, "habit_id": 103, "date": "2023-03-10", "status": true, "comment": "Achieved deep relaxation and clarity of mind after a peaceful 20-minute meditation session"}
+{"index":{}}
+{"record_id": 4, "habit_id": 104, "date": "2023-04-05", "status": true, "comment": "Made significant progress in coding exercises; overcoming challenges step by step"}
+{"index":{}}
+{"record_id": 5, "habit_id": 105, "date": "2023-05-15", "status": false, "comment": "Regrettably missed the invigorating yoga class due to a family gathering; looking forward to the next session"}
+
+
+
