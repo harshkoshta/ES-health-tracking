@@ -64,3 +64,27 @@ put record{
   }
 }
 
+#or
+Post record{
+
+               "properties": {
+                   "record_id": {
+                       "type": "integer"
+                   },
+                   "habit_id": {
+                       "type": "integer"
+                   },
+                   "date": {
+                       "type": "date"
+                   },
+                   "status": {
+                       "type": "boolean"
+                   },
+                   "comment": {
+                       "type": "text",
+                       "analyzer" : "stop",
+                       "search_analyzer" : "stop"
+                   }
+               }
+           }
+

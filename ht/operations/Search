@@ -1,0 +1,87 @@
+#search in records
+Get records{
+               "query": {
+                   "match": {
+                       "comment": "session"
+                   }
+               }
+           }
+
+ # add analyser in that , in mapping stop there, let use white space
+  GET  record/_search
+ {
+     "query": {
+         "match": {
+             "comment": {
+               "query" :  "in coding",
+             "analyzer" : "whitespace"
+             }
+         }
+     }
+ }
+
+   POST _analyze
+ {
+    "text": "in coding",
+   "analyzer": "whitespace"
+
+ }
+
+ #want to show some labes in search result not all
+  GET  record/_search
+ {
+     "query": {
+         "match": {
+             "comment": {
+               "query" :  "in coding",
+             "analyzer" : "whitespace"
+             }
+         }
+     }
+ }
+
+   POST _analyze
+ {
+    "text": "in coding",
+   "analyzer": "whitespace"
+
+ }
+
+
+ Get record/_search
+ {
+   "query" : {
+     "match_all": {}
+       },
+     "sort" : [
+       {
+       "date" : {
+         "order" : "desc"
+       }
+       }
+       ]
+ }
+
+   # highlight this not worked
+
+   Get record/_search
+ {
+      "query": {
+         "match": {
+
+             "comment":   "in coding"
+
+         }
+     },
+     "sort" : [
+       {
+       "date" : {
+         "order" : "desc"
+       }
+       }  ],
+       "highlight" : {
+         "fields" : {
+           "comment" : {}
+
+         }
+ }
