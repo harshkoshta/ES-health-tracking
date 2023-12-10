@@ -114,3 +114,5 @@ Get records{
     }
   }
     }
+
+  #update some values of specific date using update_by_query

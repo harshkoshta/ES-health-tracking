@@ -65,9 +65,8 @@ POST habits/_doc/6
     { "habit_id": 10, "user_id": 110, "habit_name": "Hiking", "start_date": "2023-10-20", "progress": 65 }
 
 
-
-#record
-POST record/_bulk
+#records
+ POST record/_bulk
 {"index":{}}
 {"record_id": 1, "habit_id": 101, "date": "2023-01-15", "status": true, "comment": "Completed a refreshing 30-minute jog in the park, enjoying the beautiful sunrise"}
 {"index":{}}
@@ -78,6 +77,36 @@ POST record/_bulk
 {"record_id": 4, "habit_id": 104, "date": "2023-04-05", "status": true, "comment": "Made significant progress in coding exercises; overcoming challenges step by step"}
 {"index":{}}
 {"record_id": 5, "habit_id": 105, "date": "2023-05-15", "status": false, "comment": "Regrettably missed the invigorating yoga class due to a family gathering; looking forward to the next session"}
+                {"index":{}}
+             {"record_id": 6, "habit_id": 106, "date": "2023-06-10", "status": true, "comment": "Explored new hiking trails and enjoyed breathtaking views along the way"}
+             {"index":{}}
+             {"record_id": 7, "habit_id": 107, "date": "2023-07-20", "status": false, "comment": "Encountered difficulty while practicing piano; need more focused practice sessions"}
+             {"index":{}}
+             {"record_id": 8, "habit_id": 108, "date": "2023-08-05", "status": true, "comment": "Attended an inspiring motivational seminar; feeling motivated and energized"}
+             {"index":{}}
+             {"record_id": 9, "habit_id": 109, "date": "2023-09-15", "status": true, "comment": "Cooked a new recipe from a cookbook; turned out delicious"}
+             {"index":{}}
+             {"record_id": 10, "habit_id": 110, "date": "2023-10-25", "status": false, "comment": "Didn't complete the daily writing goal due to unforeseen circumstances; will resume tomorrow"}
+             {"index":{}}
+             {"record_id": 11, "habit_id": 111, "date": "2023-11-10", "status": true, "comment": "Completed a challenging workout routine; feeling accomplished"}
+             {"index":{}}
+             {"record_id": 12, "habit_id": 112, "date": "2023-12-15", "status": false, "comment": "Visited the library but couldn't find the book I wanted; will try another branch"}
+             {"index":{}}
+             {"record_id": 13, "habit_id": 113, "date": "2024-01-05", "status": true, "comment": "Took part in a volunteering event; heartwarming experience"}
+             {"index":{}}
+             {"record_id": 14, "habit_id": 114, "date": "2024-02-20", "status": true, "comment": "Learned a new skill through online tutorials; eager to apply it"}
+             {"index":{}}
+             {"record_id": 15, "habit_id": 115, "date": "2024-03-08", "status": false, "comment": "Missed morning meditation due to early meeting; will meditate in the evening"}
+             {"index":{}}
+             {"record_id": 16, "habit_id": 116, "date": "2024-04-15", "status": true, "comment": "Completed a productive study session; feeling prepared"}
+             {"index":{}}
+             {"record_id": 17, "habit_id": 117, "date": "2024-05-25", "status": false, "comment": "Unable to complete daily language practice; will catch up tomorrow"}
+             {"index":{}}
+             {"record_id": 18, "habit_id": 118, "date": "2024-06-10", "status": true, "comment": "Explored a new hobby and found it enjoyable"}
+             {"index":{}}
+             {"record_id": 19, "habit_id": 119, "date": "2024-07-20", "status": true, "comment": "Attended a thought-provoking seminar; gained valuable insights"}
+             {"index":{}}
+             {"record_id": 20, "habit_id": 120, "date": "2024-08-30", "status": false, "comment": "Didn't manage to achieve the daily exercise goal; planning a more flexible routine"}
 
 
 
