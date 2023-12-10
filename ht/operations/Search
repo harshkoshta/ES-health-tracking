@@ -85,3 +85,32 @@ Get records{
 
          }
  }
+
+
+
+ #used filter in query, rember filter should used with bool one
+  Get record/_search
+  {
+    "query" : {
+      "bool" : {
+      "filter" : [
+        { "term" : {
+          "status": "true"
+        } },
+        {
+          "range" : {
+            "date" : {
+              "gte" : "2023-01-15",
+              "lte" : "2023-05-15"
+            }
+          }
+        },
+        {
+          "match" : {
+            "comment" : "enjoying"
+          }
+        }
+        ]
+    }
+  }
+    }
